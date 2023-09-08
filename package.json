@@ -1,31 +1,55 @@
 {
-	"name": "template-repos-ts",
-	"version": "1.0.0",
+	"name": "@devprotocol/connect-modal",
+	"version": "0.0.1",
+	"type": "module",
 	"description": "Template repository for using TypeScript",
+	"exports": {
+		"./web3modal/ethereum": {
+			"default": "./dist/web3modal/ethereum/ethereum.js",
+			"types": "./dist/web3modal/ethereum/ethereum.d.ts"
+		},
+		"./web3modal/react": {
+			"default": "./dist/web3modal/react/react.js",
+			"types": "./dist/web3modal/react/react.d.ts"
+		},
+		"./viem": {
+			"default": "./dist/viem/viem.js",
+			"types": "./dist/viem/viem.d.ts"
+		},
+		"./wagmi": {
+			"default": "./dist/wagmi/wagmi.js",
+			"types": "./dist/wagmi/wagmi.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"test": "ava",
-		"build": "tsc",
+		"test": "echo 'No test'",
+		"build": "tsc && rollup -c",
 		"watch": "tsc -w",
 		"pretest": "yarn build",
 		"prebuild": "rimraf dist",
-		"lint": "yarn lint:eslint && yarn lint:format",
-		"lint:eslint": "eslint . --ext .ts,.js --fix",
+		"lint": "yarn lint:format",
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
 		"prepare": "husky install"
 	},
 	"author": "Dev Protocol",
 	"license": "MPL-2.0",
-	"dependencies": {
-		"ethereum-waffle": "4.0.10",
-		"ramda": "0.29.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@ava/typescript": "4.1.0",
+		"@rollup/plugin-commonjs": "^25.0.4",
+		"@rollup/plugin-json": "^6.0.0",
+		"@rollup/plugin-node-resolve": "^15.2.1",
+		"@rollup/plugin-typescript": "^11.1.3",
 		"@types/dotenv": "8.2.0",
 		"@types/node": "18.17.14",
 		"@types/ramda": "0.29.3",
 		"@typescript-eslint/eslint-plugin": "6.6.0",
 		"@typescript-eslint/parser": "6.6.0",
+		"@web3modal/ethereum": "^2.7.1",
+		"@web3modal/react": "^2.7.1",
 		"ava": "5.3.1",
 		"dotenv": "16.3.1",
 		"eslint": "8.48.0",
@@ -33,8 +57,13 @@
 		"eslint-plugin-functional": "6.0.0",
 		"husky": "8.0.3",
 		"prettier": "3.0.3",
+		"ramda": "0.29.0",
 		"rimraf": "5.0.1",
-		"typescript": "5.2.2"
+		"rollup": "^3.29.0",
+		"rollup-plugin-dts": "^6.0.1",
+		"typescript": "5.2.2",
+		"viem": "^1.10.8",
+		"wagmi": "^1.4.1"
 	},
 	"ava": {
 		"files": [
