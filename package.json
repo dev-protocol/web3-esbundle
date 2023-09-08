@@ -81,6 +81,5 @@
 	"bugs": {
 		"url": "https://github.com/dev-protocol/template-repos-ts/issues"
 	},
-	"homepage": "https://github.com/dev-protocol/template-repos-ts#readme",
-	"private": true
+	"homepage": "https://github.com/dev-protocol/template-repos-ts#readme"
 }
