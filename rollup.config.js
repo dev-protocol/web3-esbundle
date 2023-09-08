@@ -4,6 +4,7 @@ import dts from 'rollup-plugin-dts'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
+import nodePolyfills from 'rollup-plugin-node-polyfills'
 
 const apis = [
 	['dist/web3modal/ethereum.js', 'dist/web3modal/ethereum'],
@@ -36,7 +37,7 @@ export default [
 				format: 'es',
 			},
 		],
-		plugins: [commonjs(), nodeResolve({ preferBuiltins: true }), json()],
+		plugins: [commonjs(), nodeResolve(), json(), nodePolyfills()],
 	})),
 	...dfiles.map(([input, files]) => ({
 		input,
