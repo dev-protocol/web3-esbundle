@@ -32,7 +32,8 @@
 		"prebuild": "rimraf dist",
 		"lint": "yarn lint:format",
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"prepack": "yarn build"
 	},
 	"author": "Dev Protocol",
 	"license": "MPL-2.0",
