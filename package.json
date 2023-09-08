@@ -13,7 +13,7 @@
 			"types": "./dist/web3modal/react/react.d.ts"
 		},
 		"./wagmi": {
-			"default": "./dist/wagmi/index/index.js",
+			"default": "./dist/wagmi/index.js",
 			"types": "./dist/wagmi/index.d.ts"
 		},
 		"./wagmi/chains": {

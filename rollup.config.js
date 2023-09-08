@@ -10,7 +10,7 @@ const apis = [
 	['dist/web3modal/ethereum.js', 'dist/web3modal/ethereum'],
 	['dist/web3modal/react.js', 'dist/web3modal/react'],
 	['dist/viem.js', 'dist/viem'],
-	['dist/wagmi/index.js', 'dist/wagmi/index'],
+	['dist/wagmi/index.js', 'dist/wagmi'],
 	['dist/wagmi/chains.js', 'dist/wagmi/chains'],
 ]
 
