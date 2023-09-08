@@ -11,25 +11,10 @@
 		"./web3modal/react": {
 			"default": "./dist/web3modal/react/react.js",
 			"types": "./dist/web3modal/react/react.d.ts"
-		},
-		"./wagmi": {
-			"default": "./dist/wagmi/index.js",
-			"types": "./dist/wagmi/index.d.ts"
-		},
-		"./wagmi/chains": {
-			"default": "./dist/wagmi/chains/chains.js",
-			"types": "./dist/wagmi/chains.d.ts"
-		},
-		"./viem": {
-			"default": "./dist/viem/viem.js",
-			"types": "./dist/viem/viem.d.ts"
 		}
 	},
 	"files": [
-		"dist",
-		"web3modal",
-		"wagmi",
-		"viem.d.ts"
+		"dist"
 	],
 	"scripts": {
 		"test": "echo 'No test'",
