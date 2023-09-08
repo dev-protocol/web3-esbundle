@@ -13,10 +13,16 @@ const apis = [
 ]
 
 const dfiles = [
-	['src/web3modal/ethereum.ts', 'dist/web3modal/ethereum'],
-	['src/web3modal/react.ts', 'dist/web3modal/react'],
-	['src/viem.ts', 'dist/viem'],
-	['src/wagmi.ts', 'dist/wagmi'],
+	[
+		'src/web3modal/ethereum.ts',
+		['dist/web3modal/ethereum.d.ts', 'web3modal/ethereum.d.ts'],
+	],
+	[
+		'src/web3modal/react.ts',
+		['dist/web3modal/react.d.ts', 'web3modal/react.d.ts'],
+	],
+	['src/viem.ts', ['dist/viem.d.ts', 'viem.d.ts']],
+	['src/wagmi.ts', ['dist/wagmi.d.ts', 'wagmi.d.ts']],
 ]
 
 export default [
@@ -30,14 +36,12 @@ export default [
 		],
 		plugins: [commonjs(), nodeResolve({ preferBuiltins: true }), json()],
 	})),
-	...dfiles.map(([input, dir]) => ({
+	...dfiles.map(([input, files]) => ({
 		input,
-		output: [
-			{
-				dir,
-				format: 'es',
-			},
-		],
+		output: files.map((file) => ({
+			file,
+			format: 'es',
+		})),
 		plugins: [dts()],
 	})),
 ]

@@ -22,14 +22,17 @@
 		}
 	},
 	"files": [
-		"dist"
+		"dist",
+		"web3modal",
+		"viem.d.ts",
+		"wagmi.d.ts"
 	],
 	"scripts": {
 		"test": "echo 'No test'",
 		"build": "tsc && rollup -c",
 		"watch": "tsc -w",
 		"pretest": "yarn build",
-		"prebuild": "rimraf dist",
+		"prebuild": "rimraf dist web3modal viem.d.ts wagmi.d.ts",
 		"lint": "yarn lint:format",
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
 		"prepare": "husky install",
