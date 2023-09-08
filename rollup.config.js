@@ -9,7 +9,8 @@ const apis = [
 	['dist/web3modal/ethereum.js', 'dist/web3modal/ethereum'],
 	['dist/web3modal/react.js', 'dist/web3modal/react'],
 	['dist/viem.js', 'dist/viem'],
-	['dist/wagmi.js', 'dist/wagmi'],
+	['dist/wagmi/index.js', 'dist/wagmi/index'],
+	['dist/wagmi/chains.js', 'dist/wagmi/chains'],
 ]
 
 const dfiles = [
@@ -22,7 +23,8 @@ const dfiles = [
 		['dist/web3modal/react.d.ts', 'web3modal/react.d.ts'],
 	],
 	['src/viem.ts', ['dist/viem.d.ts', 'viem.d.ts']],
-	['src/wagmi.ts', ['dist/wagmi.d.ts', 'wagmi.d.ts']],
+	['src/wagmi/index.ts', ['dist/wagmi/index.d.ts', 'wagmi/index.d.ts']],
+	['src/wagmi/chains.ts', ['dist/wagmi/chains.d.ts', 'wagmi/chains.d.ts']],
 ]
 
 export default [

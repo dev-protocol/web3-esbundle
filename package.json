@@ -12,27 +12,31 @@
 			"default": "./dist/web3modal/react/react.js",
 			"types": "./dist/web3modal/react/react.d.ts"
 		},
+		"./wagmi": {
+			"default": "./dist/wagmi/index/index.js",
+			"types": "./dist/wagmi/index.d.ts"
+		},
+		"./wagmi/chains": {
+			"default": "./dist/wagmi/chains/chains.js",
+			"types": "./dist/wagmi/chains.d.ts"
+		},
 		"./viem": {
 			"default": "./dist/viem/viem.js",
 			"types": "./dist/viem/viem.d.ts"
-		},
-		"./wagmi": {
-			"default": "./dist/wagmi/wagmi.js",
-			"types": "./dist/wagmi/wagmi.d.ts"
 		}
 	},
 	"files": [
 		"dist",
 		"web3modal",
-		"viem.d.ts",
-		"wagmi.d.ts"
+		"wagmi",
+		"viem.d.ts"
 	],
 	"scripts": {
 		"test": "echo 'No test'",
 		"build": "tsc && rollup -c",
 		"watch": "tsc -w",
 		"pretest": "yarn build",
-		"prebuild": "rimraf dist web3modal viem.d.ts wagmi.d.ts",
+		"prebuild": "rimraf dist web3modal wagmi viem.d.ts",
 		"lint": "yarn lint:format",
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
 		"prepare": "husky install",
