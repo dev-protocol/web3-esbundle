@@ -1,6 +1,6 @@
 {
 	"name": "@devprotocol/web3-esbundle",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"description": "Template repository for using TypeScript",
 	"exports": {
