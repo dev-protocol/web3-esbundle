@@ -35,7 +35,7 @@
 		"@web3modal/react": "^2.7.1"
 	},
 	"devDependencies": {
-		"@ava/typescript": "4.1.0",
+		"@ava/typescript": "5.0.0",
 		"@rollup/plugin-commonjs": "^25.0.4",
 		"@rollup/plugin-json": "^6.0.0",
 		"@rollup/plugin-node-resolve": "^15.2.1",
